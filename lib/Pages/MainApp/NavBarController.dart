@@ -70,12 +70,12 @@ class _NavBarControllerState extends State<NavBarController> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart,),
-            label: "Carrito",
+            label: "Carro",
             activeIcon: Icon(Icons.shopping_cart, color: Colors.orange,)
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: "Profile",
+            label: "Perfil",
             activeIcon: Icon(Icons.person, color: Colors.orange,)
           ),
         ],

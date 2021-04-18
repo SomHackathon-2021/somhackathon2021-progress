@@ -35,7 +35,7 @@ class _ShopCartScreenState extends State<ShopCartScreen> {
           backgroundColor: Colors.white,
           centerTitle: true,
           title: Text(
-            "Carrito",
+            "Carro",
             style: TextStyle(
               color: Colors.black,
             ),
@@ -48,7 +48,7 @@ class _ShopCartScreenState extends State<ShopCartScreen> {
             child: Center(
               child: Text(
                 articulos.toString() +
-                    " Articulos: Total (sin envio) " +
+                    " Articles: Total (sense enviament)) " +
                     precio.toString() +
                     "€",
                 style: TextStyle(fontSize: 17),

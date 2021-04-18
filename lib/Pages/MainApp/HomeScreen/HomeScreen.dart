@@ -94,23 +94,23 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     FeedItem(
                       asset: "assets/carniceria-icon.jpg",
-                      description: "Ya tenemos carne de calidad disponible!",
-                      name: "Carniceria San José",
+                      description: "Ja tenim disponible carn de primera qualitat!",
+                      name: "Casa Moreno",
                     ),
                     FeedItem(
                       asset: "assets/frutas-icon.jpg",
-                      description: "Ya tenemos fruta de calidad disponible!",
-                      name: "Fruteria Rosa",
+                      description: "Vine a provar la fruita de la millor qualitat!",
+                      name: "Can Margarida Horta",
                     ),
                     FeedItem(
                       asset: "assets/moda-icon.jpg",
-                      description: "Ya tenemos zapatos de calidad disponible!",
-                      name: "Moda la Reina",
+                      description: "Calçats per a tots els peus!",
+                      name: "Calçats Esteve",
                     ),
                     FeedItem(
                       asset: "assets/ropa-icon.jpg",
-                      description: "Ya tenemos ropa de calidad disponible!",
-                      name: "Zara Progre",
+                      description: "Vesteix com una reina!",
+                      name: "La Reina",
                     ),
                   ],
                 ))

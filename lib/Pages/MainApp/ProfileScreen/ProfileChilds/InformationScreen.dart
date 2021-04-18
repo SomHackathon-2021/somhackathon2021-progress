@@ -17,7 +17,7 @@ class InformationScreen extends StatelessWidget {
             ),
             onPressed: () => Navigator.pop(context)),
         title: Text(
-          "Information",
+          "Informació",
           style: TextStyle(color: Colors.black),
         ),
       ),

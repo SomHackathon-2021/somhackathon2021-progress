@@ -115,7 +115,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      "Reset Password",
+                      "Recuperar Contrassenya",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -147,7 +147,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      "Go back",
+                      "Tornar",
                       style: TextStyle(
                         color: Colors.orange,
                         fontWeight: FontWeight.w500,

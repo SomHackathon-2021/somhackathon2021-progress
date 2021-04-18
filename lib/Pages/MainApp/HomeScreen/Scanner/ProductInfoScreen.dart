@@ -196,7 +196,7 @@ class ProductInfoScreen extends StatelessWidget {
   }
 
   _isLocal() {
-    if (item.isLocal) {
+    if (item.numeroSellos > 0) {
       return Icon(
         Icons.sentiment_satisfied_alt_rounded,
         color: Colors.green,

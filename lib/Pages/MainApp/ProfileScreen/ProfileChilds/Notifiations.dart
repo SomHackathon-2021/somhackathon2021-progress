@@ -26,7 +26,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             ),
             onPressed: () => Navigator.pop(context)),
         title: Text(
-          "Notifications",
+          "Notificacions",
           style: TextStyle(color: Colors.black),
         ),
       ),
@@ -49,7 +49,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             ),
             Card(
               child: ListTile(
-                title: Text("Envio"),
+                title: Text("Enviament"),
                 leading: Icon(Icons.local_shipping_outlined),
                 trailing: Checkbox(
                     value: shopNotification,
@@ -62,7 +62,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
             ),
             Card(
               child: ListTile(
-                title: Text("Descuento"),
+                title: Text("Descompte"),
                 leading: Icon(Icons.attach_money),
                 trailing: Checkbox(
                     value: shopNotification,

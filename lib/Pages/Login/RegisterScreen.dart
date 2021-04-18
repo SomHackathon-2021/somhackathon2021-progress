@@ -74,7 +74,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: TextFormField(
                           validator: (value) {
                             if (value.isEmpty) {
-                              return "Enter a Name";
+                              return "Introdueix el teu nom";
                             } else {
                               return null;
                             }
@@ -100,7 +100,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 borderSide: BorderSide(color: Colors.red)),
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Your name',
+                            hintText: 'Introdueix el teu nom',
                             hintStyle: TextStyle(
                                 fontSize: 18,
                                 color: Color(0xFF747679),
@@ -119,7 +119,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         child: TextFormField(
                           validator: (value) {
                             if (value.isEmpty) {
-                              return "Enter an email";
+                              return "Introdueix el teu correu";
                             }else{
                               return null;
                             }
@@ -145,7 +145,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 borderSide: BorderSide(color: Colors.red)),
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Your email',
+                            hintText: 'Introdueix el teu correu',
                             hintStyle: TextStyle(
                                 fontSize: 18,
                                 color: Color(0xFF747679),
@@ -165,7 +165,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           TextFormField(
                             validator: (value) {
                               if (value.isEmpty) {
-                                return "Enter a password";
+                                return "Introdueix una contrassenya";
                               }else{
                                 return null;
                               }
@@ -205,7 +205,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   borderSide: BorderSide(color: Colors.red)),
                               filled: true,
                               fillColor: Colors.white,
-                              hintText: 'Password',
+                              hintText: 'Contrassenya',
                               hintStyle: TextStyle(
                                   fontSize: 18,
                                   color: Color(0xFF747679),
@@ -254,7 +254,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     dynamic result = await _auth.registerWithEmailAndPassword(emailRegisterController.text, passwordRegisterController.text);
                     if(result == null){
                       setState(() {
-                        error = "please suply a valid email";
+                        error = "Siusuplau introdueix un correu vàlid";
                       }
                       );
                     }else{
@@ -282,7 +282,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      "Register",
+                      "Registrar",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -314,7 +314,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      "Go back",
+                      "Tornar",
                       style: TextStyle(
                         color: Colors.orange,
                         fontWeight: FontWeight.w500,

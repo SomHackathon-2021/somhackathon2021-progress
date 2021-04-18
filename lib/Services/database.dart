@@ -52,7 +52,9 @@ class UsersDatabase {
           name: value.get("name"),
           description: value.get("description"),
           imgUrl: value.get("img"),
-          isLocal: value.get("isLocal"),
+          city: value.get("city"),
+          country: value.get("country"),
+          numeroSellos: value.get("stamps"),
           nutritionalData: value.get("nutritional_data"),
         );
       });

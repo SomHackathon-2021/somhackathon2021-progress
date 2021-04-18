@@ -103,7 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           Card(
                             child: ListTile(
-                              title: Text("Compras recientes"),
+                              title: Text("Compres recents"),
                               leading: Icon(Icons.shopping_bag_outlined),
                               trailing: Icon(Icons.arrow_forward_ios),
                             ),
@@ -125,7 +125,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             },
                             child: Card(
                               child: ListTile(
-                                title: Text("Notificaciones"),
+                                title: Text("Notificacions"),
                                 leading: Icon(Icons.notifications),
                                 trailing: Icon(Icons.arrow_forward_ios),
                               ),
@@ -147,7 +147,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             },
                             child: Card(
                               child: ListTile(
-                                title: Text("Ayuda"),
+                                title: Text("Ajuda"),
                                 leading: Icon(Icons.help),
                                 trailing: Icon(Icons.arrow_forward_ios),
                               ),
@@ -163,7 +163,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             },
                             child: Card(
                               child: ListTile(
-                                title: Text("Info"),
+                                title: Text("Informació"),
                                 leading: Icon(Icons.info_outline_rounded),
                                 trailing: Icon(Icons.arrow_forward_ios),
                               ),

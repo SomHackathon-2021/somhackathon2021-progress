@@ -10,6 +10,11 @@ class CreateNewItem extends StatefulWidget {
 
 class _CreateNewItemState extends State<CreateNewItem> {
   final _formKey = GlobalKey<FormState>();
+  
+  // Nom 
+  // Descripcio
+  // Puntuació (distancia - numeroSellos)
+
 
   @override
   Widget build(BuildContext context) {

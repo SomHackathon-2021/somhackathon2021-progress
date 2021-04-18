@@ -123,7 +123,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 borderSide: BorderSide(color: Colors.red)),
                             filled: true,
                             fillColor: Colors.white,
-                            hintText: 'Password',
+                            hintText: 'Contrassenya',
                             hintStyle: TextStyle(
                                 fontSize: 18,
                                 color: Color(0xFF747679),
@@ -153,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             builder: (context) => ForgotPasswordScreen()));
                   },
                   child: Text(
-                    'Forgot Password',
+                    'Recuperar contrassenya',
                     style: TextStyle(color: Colors.green, fontSize: 15),
                   ),
                 ),
@@ -179,7 +179,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      "Login",
+                      "Entrar",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -214,7 +214,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   child: Center(
                     child: Text(
-                      "Register",
+                      "Registrar",
                       style: TextStyle(
                         color: Colors.orange,
                         fontWeight: FontWeight.w500,
