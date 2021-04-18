@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CreateNewItem extends StatefulWidget {
   String barcode;
@@ -10,11 +11,10 @@ class CreateNewItem extends StatefulWidget {
 
 class _CreateNewItemState extends State<CreateNewItem> {
   final _formKey = GlobalKey<FormState>();
-  
-  // Nom 
+
+  // Nom
   // Descripcio
   // Puntuació (distancia - numeroSellos)
-
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,10 @@ class _CreateNewItemState extends State<CreateNewItem> {
         elevation: 1,
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: Text("Crear producte", style: TextStyle(color: Colors.black),),
+        title: Text(
+          "Crear producte",
+          style: TextStyle(color: Colors.black),
+        ),
         leading: IconButton(
             icon: Icon(
               Icons.arrow_back_ios_outlined,
@@ -96,6 +99,55 @@ class _CreateNewItemState extends State<CreateNewItem> {
                     style: new TextStyle(
                       fontFamily: "Poppins",
                     ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: 30, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(children: [
+                        IconButton(
+                          icon: Icon(FontAwesomeIcons.tree),
+                          iconSize: 40,
+                          onPressed: () {},
+                        ),
+                        Text("Natura"),
+                      ]),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Column(children: [
+                        IconButton(
+                          icon: Icon(FontAwesomeIcons.peopleCarry),
+                          iconSize: 40,
+                          onPressed: () {},
+                        ),
+                        Text("Persones"),
+                      ]),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Column(children: [
+                        IconButton(
+                          icon: Icon(FontAwesomeIcons.equals),
+                          iconSize: 40,
+                          onPressed: () {},
+                        ),
+                        Text("Igualtat"),
+                      ]),
+                      SizedBox(
+                        width: 40,
+                      ),
+                      Column(children: [
+                        IconButton(
+                          icon: Icon(Icons.my_location_sharp),
+                          iconSize: 40,
+                          onPressed: () {},
+                        ),
+                        Text("Proximitat"),
+                      ]),
+                    ],
                   ),
                 ),
               ],

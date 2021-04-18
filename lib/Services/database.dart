@@ -55,6 +55,10 @@ class UsersDatabase {
           city: value.get("city"),
           country: value.get("country"),
           numeroSellos: value.get("stamps"),
+          respectEquality: value.get("respect_equality"),
+          respectNature: value.get("respect_nature"),
+          respectWorker: value.get("respect_worker"),
+          isClose: value.get("isClose"),
           nutritionalData: value.get("nutritional_data"),
         );
       });

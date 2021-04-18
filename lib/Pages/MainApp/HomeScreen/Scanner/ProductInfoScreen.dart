@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hackathon/Models/ItemFirebase.dart';
 import 'package:hackathon/Pages/MainApp/HomeScreen/Scanner/CreateNewItem.dart';
 import 'package:hackathon/Services/database.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class ProductInfoScreen extends StatelessWidget {
   String id;
@@ -97,7 +99,7 @@ class ProductInfoScreen extends StatelessWidget {
                       onPressed: () => Navigator.pop(context)),
                 ),
                 body: Container(
-                  height: MediaQuery.of(context).size.height * 0.62,
+                  height: MediaQuery.of(context).size.height * 0.7,
                   margin: EdgeInsets.only(top: 60, right: 30, left: 30),
                   decoration: BoxDecoration(
                     boxShadow: [
@@ -120,9 +122,9 @@ class ProductInfoScreen extends StatelessWidget {
                             CircleAvatar(
                               radius: 50,
                               backgroundColor: Colors.transparent,
-                              backgroundImage: AssetImage("assets/redbull.png"),
+                              backgroundImage: NetworkImage(item.imgUrl),
                             ),
-                            _isLocal(),
+                            _circlePercent(),
                           ],
                         ),
                       ),
@@ -139,6 +141,52 @@ class ProductInfoScreen extends StatelessWidget {
                         child: Text(
                           item.description,
                           style: TextStyle(color: Colors.grey, fontSize: 16),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Center(
+                        child: Text(
+                          (item.country + ", " + item.city),
+                          style: TextStyle(color: Colors.grey, fontSize: 13),
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 30, bottom: 5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              FontAwesomeIcons.tree,
+                              color: _NatureColor(),
+                              size: 30,
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Icon(
+                              FontAwesomeIcons.peopleCarry,
+                              color: _WorkersColor(),
+                              size: 30,
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Icon(
+                              FontAwesomeIcons.equals,
+                              color: _EqualsColor(),
+                              size: 30,
+                            ),
+                            SizedBox(
+                              width: 30,
+                            ),
+                            Icon(
+                              Icons.my_location_sharp,
+                              color: _LocationColor(),
+                              size: 30,
+                            ),
+                          ],
                         ),
                       ),
                       SizedBox(
@@ -164,6 +212,8 @@ class ProductInfoScreen extends StatelessWidget {
 
   Column _getNutritionalInfo() {
     List<Widget> nutritionalDataList = [];
+
+
 
     item.nutritionalData.forEach((key, value) {
       nutritionalDataList.add(Padding(
@@ -195,19 +245,59 @@ class ProductInfoScreen extends StatelessWidget {
     return itemQuery;
   }
 
-  _isLocal() {
+  _circlePercent() {
     if (item.numeroSellos > 0) {
-      return Icon(
-        Icons.sentiment_satisfied_alt_rounded,
-        color: Colors.green,
-        size: 50,
+      
+      double percent =  (item.numeroSellos/4);
+
+      return CircularPercentIndicator(
+        radius: 60,
+        lineWidth: 5,
+        percent: percent,
+        center: new Text((percent*100).toString() + "%"),
+        progressColor: Colors.green,
       );
     } else {
-      return Icon(
-        Icons.mood_bad_rounded,
-        color: Colors.red,
-        size: 50,
+      return CircularPercentIndicator(
+        radius: 60,
+        lineWidth: 5,
+        backgroundColor: Colors.red,
+        percent: 0,
+        center: new Text("0%"),
+        progressColor: Colors.green,
       );
+    }
+  }
+
+  MaterialColor _NatureColor() {
+    if(item.respectNature){
+      return Colors.green;
+    }else{
+      return Colors.red;
+    }
+  }
+
+  MaterialColor _WorkersColor() {
+    if(item.respectWorker){
+      return Colors.green;
+    }else{
+      return Colors.red;
+    }
+  }
+
+  MaterialColor _EqualsColor() {
+    if(item.respectEquality){
+      return Colors.green;
+    }else{
+      return Colors.red;
+    }
+  }
+
+  MaterialColor _LocationColor() {
+    if(item.isClose){
+      return Colors.green;
+    }else{
+      return Colors.red;
     }
   }
 }

@@ -43,7 +43,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 ),
               ),
               Text(
-                "L Commerce",
+                "Goeco",
                 style: TextStyle(
                   fontSize: 18,
                   color: Colors.green[600],
